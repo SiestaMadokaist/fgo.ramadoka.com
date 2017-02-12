@@ -1,0 +1,23 @@
+development: &dev
+  adapter: mysql2
+  encoding: utf8
+  pool: 64
+  reaping_frequency: 5
+  reconnect: false
+  database: <%= ENV['FGO_DB_DEV'] %>
+  username: <%= ENV['FGO_USER_DEV'] %>
+  password: <%= ENV['FGO_PASS_DEV'] %>
+  host: <%= ENV['FGO_HOST_DEV'] %>
+  reconnect: true
+
+spec: &dev
+  adapter: mysql2
+  encoding: utf8
+  pool: 64
+  reaping_frequency: 5
+  reconnect: false
+  database: <%= ENV['FGO_DB_SPEC'] %>
+  username: <%= ENV['FGO_USER_SPEC'] %>
+  password: <%= ENV['FGO_PASS_SPEC'] %>
+  host: <%= ENV['FGO_HOST_SPEC'] %>
+  reconnect: true

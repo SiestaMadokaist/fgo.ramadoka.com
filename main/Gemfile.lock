@@ -1,0 +1,145 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (5.0.1)
+      activesupport (= 5.0.1)
+    activerecord (5.0.1)
+      activemodel (= 5.0.1)
+      activesupport (= 5.0.1)
+      arel (~> 7.0)
+    activesupport (5.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (7.1.4)
+    aws-sdk (2.7.7)
+      aws-sdk-resources (= 2.7.7)
+    aws-sdk-core (2.7.7)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.7.7)
+      aws-sdk-core (= 2.7.7)
+    aws-sigv4 (1.0.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    bindata (2.3.5)
+    builder (3.2.3)
+    chronic (0.10.2)
+    coderay (1.1.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    concurrent-ruby (1.0.4)
+    connection_pool (2.2.1)
+    database_cleaner (1.5.3)
+    delorean (2.1.0)
+      chronic
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    equalizer (0.0.11)
+    factory_girl (4.8.0)
+      activesupport (>= 3.0.0)
+    faraday (0.10.1)
+      multipart-post (>= 1.2, < 3)
+    grape (0.19.1)
+      activesupport
+      builder
+      hashie (>= 2.1.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      mustermann-grape (~> 0.4.0)
+      rack (>= 1.3.0)
+      rack-accept
+      virtus (>= 1.0.0)
+    grape-entity (0.6.0)
+      activesupport
+      multi_json (>= 1.3.2)
+    grape-swagger (0.25.3)
+      grape (>= 0.12.0)
+    hashie (3.5.3)
+    i18n (0.8.0)
+    ice_nine (0.11.2)
+    jmespath (1.3.1)
+    json-jwt (1.7.1)
+      activesupport
+      bindata
+      multi_json (>= 1.3)
+      securecompare
+      url_safe_base64
+    jwt (1.5.6)
+    memoist (0.15.0)
+    method_source (0.8.2)
+    minitest (5.10.1)
+    multi_json (1.12.1)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    mustermann (0.4.0)
+      tool (~> 0.2)
+    mustermann-grape (0.4.0)
+      mustermann (= 0.4.0)
+    mysql2 (0.4.5)
+    newrelic-grape (2.1.0)
+      grape
+      newrelic_rpm
+    newrelic_rpm (3.18.1.330)
+    oauth2 (1.3.0)
+      faraday (>= 0.8, < 0.11)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    puma (3.7.0)
+    rack (2.0.1)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (12.0.0)
+    securecompare (1.0.0)
+    slop (3.6.0)
+    thread_safe (0.3.5)
+    tool (0.2.3)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    url_safe_base64 (0.2.2)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord
+  aws-sdk
+  connection_pool
+  database_cleaner
+  delorean
+  factory_girl
+  grape
+  grape-entity
+  grape-swagger
+  json-jwt
+  memoist
+  mysql2
+  newrelic-grape
+  newrelic_rpm
+  oauth2
+  pry
+  puma
+  rack-test
+  rake
+
+RUBY VERSION
+   ruby 2.2.2p95
+
+BUNDLED WITH
+   1.14.3
