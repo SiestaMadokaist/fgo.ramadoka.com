@@ -8,6 +8,6 @@ use Rack::Deflater
 # use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 # start new relic agent
-NewRelic::Agent.manual_start
+# NewRelic::Agent.manual_start
 
 run ApplicationServer

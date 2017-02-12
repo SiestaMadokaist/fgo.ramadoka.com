@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170212150604) do
+ActiveRecord::Schema.define(version: 20170212154640) do
 
   create_table "material_servants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",  null: false
@@ -19,13 +19,15 @@ ActiveRecord::Schema.define(version: 20170212150604) do
     t.integer  "servant_id",  null: false
     t.integer  "classifier",  null: false
     t.integer  "count",       null: false
-    t.integer  "n",           null: false
+    t.integer  "level",       null: false
   end
 
   create_table "materials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "name",       null: false
+    t.string   "slug",       null: false
+    t.index ["slug"], name: "index_materials_on_slug", unique: true, using: :btree
   end
 
   create_table "servant_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -38,8 +40,23 @@ ActiveRecord::Schema.define(version: 20170212150604) do
   create_table "servants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "klass",      null: false
+    t.integer  "star",       null: false
     t.string   "name",       null: false
-    t.index ["name"], name: "index_servants_on_name", unique: true, using: :btree
+    t.string   "slug",       null: false
+    t.index ["slug"], name: "index_servants_on_slug", unique: true, using: :btree
+  end
+
+  create_table "user_auths", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "origin",                            null: false
+    t.string   "origin_id",                         null: false
+    t.integer  "user_id"
+    t.boolean  "validated",         default: false, null: false
+    t.string   "validation_token"
+    t.datetime "validation_expiry"
+    t.index ["origin", "origin_id"], name: "index_user_auths_on_origin_and_origin_id", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

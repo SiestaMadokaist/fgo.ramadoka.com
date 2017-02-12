@@ -7,6 +7,7 @@ class CreateMaterialServants < ActiveRecord::Migration
       t.integer(:servant_id, null: false)
       t.integer(:classifier, null: false)
       t.integer(:count, null: false)
+      t.integer(:level, null: false)
     end
   end
 end

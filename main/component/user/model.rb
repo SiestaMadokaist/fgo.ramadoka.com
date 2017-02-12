@@ -3,8 +3,16 @@ class Component::User::Model < ActiveRecord::Base
     def name
       "User"
     end
+    def email_register!(email, password, name)
+      auth = UserAuth
+      user = new(email: email, password: password, name: name)
+      user.save!
+      user
+    end
   end
 
   has_many(:servant_users, class_name: "Component::ServantUser::Model")
   has_many(:servants, class_name: "Component::Servant::Model", through: :servant_users)
+
 end
+User = Component::User::Model

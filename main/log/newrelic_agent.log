@@ -1342,3 +1342,378 @@
 [2017-02-12 15:06:04 +0700 Ramas-MacBook-Pro.local (23957)] INFO : Installing deferred Rack::Builder instrumentation
 [2017-02-12 15:06:04 +0700 Ramas-MacBook-Pro.local (23957)] INFO : Installing Rack::Builder middleware instrumentation
 [2017-02-12 15:06:04 +0700 Ramas-MacBook-Pro.local (23957)] INFO : Finished instrumentation
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Environment: development
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : No known dispatcher detected.
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Application: development
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Installing Net instrumentation
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:46:33 +0700 Ramas-MacBook-Pro.local (24176)] INFO : Finished instrumentation
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Environment: development
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : No known dispatcher detected.
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Application: development
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Installing Net instrumentation
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:46:40 +0700 Ramas-MacBook-Pro.local (24180)] INFO : Finished instrumentation
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Environment: development
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : No known dispatcher detected.
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Application: development
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Installing Net instrumentation
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:52:36 +0700 Ramas-MacBook-Pro.local (24195)] INFO : Finished instrumentation
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Environment: development
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : No known dispatcher detected.
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Application: development
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Installing Net instrumentation
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:52:58 +0700 Ramas-MacBook-Pro.local (24198)] INFO : Finished instrumentation
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Environment: development
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : No known dispatcher detected.
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Application: development
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Installing Net instrumentation
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:53:39 +0700 Ramas-MacBook-Pro.local (24201)] INFO : Finished instrumentation
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Environment: development
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : No known dispatcher detected.
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Application: development
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Installing Net instrumentation
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:55:44 +0700 Ramas-MacBook-Pro.local (24216)] INFO : Finished instrumentation
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Environment: development
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : No known dispatcher detected.
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Application: development
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Installing Net instrumentation
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:56:43 +0700 Ramas-MacBook-Pro.local (24219)] INFO : Finished instrumentation
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Environment: development
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : No known dispatcher detected.
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Application: development
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Installing Net instrumentation
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:57:23 +0700 Ramas-MacBook-Pro.local (24222)] INFO : Finished instrumentation
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Environment: development
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : No known dispatcher detected.
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Application: development
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Installing Net instrumentation
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 15:57:48 +0700 Ramas-MacBook-Pro.local (24224)] INFO : Finished instrumentation
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Environment: development
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : No known dispatcher detected.
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Application: development
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Installing Net instrumentation
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:03:18 +0700 Ramas-MacBook-Pro.local (24233)] INFO : Finished instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Environment: development
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Dispatcher: puma
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Application: development
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Installing Net instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Finished instrumentation
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Environment: development
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Dispatcher: puma
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Application: development
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:04:59 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Installing Grape instrumentation
+[2017-02-12 16:05:28 +0700 Ramas-MacBook-Pro.local (24237)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:05:28 +0700 Ramas-MacBook-Pro.local (24237)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:05:30 +0700 Ramas-MacBook-Pro.local (24237)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:05:30 +0700 Ramas-MacBook-Pro.local (24237)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:05:43 +0700 Ramas-MacBook-Pro.local (24237)] INFO : Starting Agent shutdown
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Environment: development
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Dispatcher: puma
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Application: development
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Installing Net instrumentation
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:06:02 +0700 Ramas-MacBook-Pro.local (24277)] INFO : Finished instrumentation
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Environment: development
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Dispatcher: puma
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Application: development
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Installing Net instrumentation
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:06:37 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Finished instrumentation
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Environment: development
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Dispatcher: puma
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Application: development
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:07:19 +0700 Ramas-MacBook-Pro.local (24279)] INFO : Installing Grape instrumentation
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Environment: development
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Dispatcher: puma
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Application: development
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Installing Net instrumentation
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:07:21 +0700 Ramas-MacBook-Pro.local (24282)] INFO : Finished instrumentation
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Environment: development
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Dispatcher: puma
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Application: development
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Installing Net instrumentation
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:09:33 +0700 Ramas-MacBook-Pro.local (24290)] INFO : Finished instrumentation
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Environment: development
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Dispatcher: puma
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Application: development
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Installing Net instrumentation
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:09:45 +0700 Ramas-MacBook-Pro.local (24292)] INFO : Finished instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Environment: development
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Dispatcher: puma
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Application: development
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Installing Net instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Finished instrumentation
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Environment: development
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Dispatcher: puma
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Application: development
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:10:03 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Installing Grape instrumentation
+[2017-02-12 16:10:08 +0700 Ramas-MacBook-Pro.local (24294)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:10:08 +0700 Ramas-MacBook-Pro.local (24294)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:10:10 +0700 Ramas-MacBook-Pro.local (24294)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:10:10 +0700 Ramas-MacBook-Pro.local (24294)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:11:17 +0700 Ramas-MacBook-Pro.local (24294)] INFO : Starting Agent shutdown
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Environment: development
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Dispatcher: puma
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Application: development
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Installing Net instrumentation
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:11:20 +0700 Ramas-MacBook-Pro.local (24397)] INFO : Finished instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Environment: development
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Dispatcher: puma
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Application: development
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Installing Net instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Finished instrumentation
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Environment: development
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Dispatcher: puma
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Application: development
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:11:32 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Installing Grape instrumentation
+[2017-02-12 16:11:36 +0700 Ramas-MacBook-Pro.local (24399)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:11:36 +0700 Ramas-MacBook-Pro.local (24399)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:11:39 +0700 Ramas-MacBook-Pro.local (24399)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:11:39 +0700 Ramas-MacBook-Pro.local (24399)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:12:09 +0700 Ramas-MacBook-Pro.local (24399)] INFO : Starting Agent shutdown
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Environment: development
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Dispatcher: puma
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Application: development
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Installing Net instrumentation
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2017-02-12 16:12:10 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Finished instrumentation
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] WARN : No configuration file found. Working directory = /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] WARN : Looked in these locations (based on defaults): /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/config/newrelic.yml, /Users/Ramadoka/development/side/ruby/fgo.ramadoka.com/main/newrelic.yml, /Users/Ramadoka/.newrelic/newrelic.yml, /Users/Ramadoka/newrelic.yml
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Environment: development
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Dispatcher: puma
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Application: development
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Not installing New Relic supported Grape instrumentation because the third party newrelic-grape gem is present
+[2017-02-12 16:12:11 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Installing Grape instrumentation
+[2017-02-12 16:12:27 +0700 Ramas-MacBook-Pro.local (24428)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:12:27 +0700 Ramas-MacBook-Pro.local (24428)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:12:29 +0700 Ramas-MacBook-Pro.local (24428)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-02-12 16:12:29 +0700 Ramas-MacBook-Pro.local (24428)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2017-02-12 16:12:55 +0700 Ramas-MacBook-Pro.local (24428)] INFO : Starting Agent shutdown
