@@ -1,7 +1,11 @@
 require File.expand_path("../../application", __FILE__)
 require File.expand_path("../seed/servant", __FILE__)
+require File.expand_path("../seed/servant.class", __FILE__)
 ActiveRecord::Base.logger = Logger.new(STDOUT)
-seed1 = Seed::Servant.new("http://fategrandorder.wikia.com/wiki/Artoria_Pendragon")
-seed2 = Seed::Servant.new("http://fategrandorder.wikia.com/wiki/Artoria_Pendragon_(Alter)")
-seed1.seed!
-seed2.seed!
+
+sx = Servant.klass.drop(3).map{|k| k.to_s.classify }
+  .map{|k| "http://fategrandorder.wikia.com/wiki/#{k}"}
+  .map{|url| Seed::ServantClass.new(url) }
+sx.each do |s|
+  s.seed!
+end

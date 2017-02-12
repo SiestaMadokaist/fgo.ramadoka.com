@@ -9,5 +9,6 @@ class CreateMaterialServants < ActiveRecord::Migration
       t.integer(:count, null: false)
       t.integer(:level, null: false)
     end
+    add_index(:material_servants, [:material_id, :servant_id, :classifier, :level], unique: true, name: :fk1)
   end
 end

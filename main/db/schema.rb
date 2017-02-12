@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170212154640) do
     t.integer  "classifier",  null: false
     t.integer  "count",       null: false
     t.integer  "level",       null: false
+    t.index ["material_id", "servant_id", "classifier", "level"], name: "fk1", unique: true, using: :btree
   end
 
   create_table "materials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

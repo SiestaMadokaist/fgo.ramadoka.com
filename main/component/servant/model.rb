@@ -18,5 +18,10 @@ class Component::Servant::Model < ActiveRecord::Base
   def init_slug!
     self.slug = self.name.parameterize
   end
+
+  def wiki_url
+    "http://fategrandorder.wikia.com/wiki/#{name.gsub(" ", "_")}"
+  end
+
 end
 Servant = Component::Servant::Model
