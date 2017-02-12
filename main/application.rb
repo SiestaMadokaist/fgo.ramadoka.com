@@ -2,8 +2,19 @@ require File.expand_path("../component/init.rb", __FILE__)
 require File.expand_path("../environment", __FILE__)
 Dir["#{File.dirname(__FILE__)}/common/**/*.rb"].each{|f| require f}
 
+
+require 'garner/mixins/active_record'
+require 'garner/mixins/rack'
+include Garner::Mixins::Rack
+class String
+  def realpath
+    self
+  end
+end
+
 class ActiveRecord::Base
   class << self
+    include Garner::Mixins::ActiveRecord::Base
     def get1!(options, kwargs={})
       g = where(options).first
       if(g.nil?)

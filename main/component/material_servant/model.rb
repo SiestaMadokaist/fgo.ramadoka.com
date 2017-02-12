@@ -9,13 +9,15 @@ class Component::MaterialServant::Model < ActiveRecord::Base
   belongs_to(:servant, class_name: "Component::Servant::Model")
   enum classifier: [ :ascension, :skill ]
 
-  # CLASSIFIER = Hash[
-    # ascension: 0,
-    # skill: 1
-  # ]
-#
-  # def convert_classifier!
-    # return if self.classifier >= 0 and self.classifier <= 1
-    # self.classifier = CLASSIFIER[self.classifier]
-  # end
+  def material_name
+    material.name
+  end
+
+  def servant_name
+    servant.name
+  end
+
+  def presented
+    Component::MaterialServant::Entity::WithServantName.represent(self).as_json
+  end
 end
