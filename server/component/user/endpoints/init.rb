@@ -4,4 +4,5 @@ class Component::User::Endpoints
     end
   end
   require File.expand_path("../v1.web.rb", __FILE__)
+  require File.expand_path("../v1.web.sinatra.rb", __FILE__)
 end

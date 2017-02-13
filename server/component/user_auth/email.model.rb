@@ -4,6 +4,10 @@ class Component::UserAuth::Email < Component::UserAuth::Model
       where(origin: :email)
     end
 
+    # @param email [String] (user's email)
+    # @param password [String] (user's password before encript/hash)
+    # @param name [String] (user's desired name, not necessary to be unique)
+    # @return [Void]
     def register!(email, password, name)
       auth = new(origin: :email, origin_id: email)
       auth.user = Component::User::Model.new(name: name, password: hashify(password))

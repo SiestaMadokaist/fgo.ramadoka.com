@@ -34,4 +34,3 @@ class Component::UserAuth::Model < ActiveRecord::Base
 end
 
 UserAuth = Component::UserAuth::Model
-require File.expand_path("../email.model", __FILE__)

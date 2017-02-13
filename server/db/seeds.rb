@@ -25,9 +25,3 @@ servants = [
   Servant.lookup("mariant").first
   Servant.lookupp("rama").first
 ]
-require 'pry'
-binding.pry
-
-
-
-# mord = Seed::Servant.new("http://fategrandorder.wikia.com/wiki/Mordred")

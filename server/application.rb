@@ -1,5 +1,5 @@
 require File.expand_path("../environment", __FILE__)
-Dir["#{File.dirname(__FILE__)}/common/**/*.rb"].each{|f| require f}
+Dir["#{File.dirname(__FILE__)}/common/**/init.rb"].each{|f| require f}
 Dir["#{File.dirname(__FILE__)}/initialization/**/init.rb"].each{|f| require f}
 require File.expand_path("../component/init.rb", __FILE__)
 
@@ -12,6 +12,26 @@ class String
   end
 end
 
+class Hash
+  def serialize(str)
+    q = map{|k, v| "#{k}=#{v}"}.join("&")
+    "#{str}?#{q}"
+  end
+end
+
+OAuth2::Response.register_parser(:text, 'text/plain') do |body|
+  kv = body
+    .split("&")
+    .map{|s| s.split("=")}
+  Hash[kv]
+  # key, value = body.split('=')
+  # {key => value}
+end
+class Sinatra::Request
+  def uri
+    "#{base_url}#{path}"
+  end
+end
 class ActiveRecord::Base
   class << self
     include Garner::Mixins::ActiveRecord::Base
@@ -52,6 +72,7 @@ module Ramadoka
       api_version: 1,
       mount_path: "api/docs"
     )
+    mount Component::User::Endpoints::V1::Web::Sinatra
   end
 end
 
