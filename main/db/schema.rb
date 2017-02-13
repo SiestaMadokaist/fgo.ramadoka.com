@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170212154640) do
     t.datetime "updated_at", null: false
     t.integer  "servant_id", null: false
     t.integer  "user_id",    null: false
+    t.index ["servant_id", "user_id"], name: "index_servant_users_on_servant_id_and_user_id", unique: true, using: :btree
   end
 
   create_table "servants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -8,6 +8,27 @@ class Component::Servant::Model < ActiveRecord::Base
       [:shielder, :saber, :archer, :lancer, :rider, :caster, :assassin, :berserker, :ruler, :avenger, :beast]
     end
 
+    def cached
+      garner.options(expires_in: 5.minute) do
+        select([:id, :name, :slug]).all
+      end
+    end
+
+    def edit_distance(query)
+      cached.map do |m|
+        FED.new(m, query.downcase){|m| m.slug.downcase }
+      end
+    end
+
+    def lookup(query, n = 5)
+      raise QueryTooShort if query.length < 4
+      edit_distance(query)
+        .sort_by(&:distance)
+        .reverse
+        .take(n)
+        .map(&:obj)
+    end
+
   end
   enum(klass: klass)
   has_many(:material_servants, ->{ includes(:material) }, class_name: "Component::MaterialServant::Model")

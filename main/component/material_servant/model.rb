@@ -18,6 +18,6 @@ class Component::MaterialServant::Model < ActiveRecord::Base
   end
 
   def presented
-    Component::MaterialServant::Entity::WithServantName.represent(self).as_json
+    Component::MaterialServant::Entity::WithServant.represent(self).as_json
   end
 end

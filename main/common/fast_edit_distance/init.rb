@@ -17,7 +17,6 @@ class FED
 
   def distance
     FSM.getDistance(arg, @query)
-    # Levenshtein.distance(arg, @query)
   end
   memoize(:distance)
 end

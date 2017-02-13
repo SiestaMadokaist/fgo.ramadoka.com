@@ -14,8 +14,5 @@ class Component::User::Model < ActiveRecord::Base
   has_many(:servant_users, class_name: "Component::ServantUser::Model")
   has_many(:servants, class_name: "Component::Servant::Model", through: :servant_users)
 
-  def material_lookup(material_name)
-  end
-
 end
 User = Component::User::Model

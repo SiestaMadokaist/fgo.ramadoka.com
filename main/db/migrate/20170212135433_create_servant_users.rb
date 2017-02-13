@@ -6,6 +6,6 @@ class CreateServantUsers < ActiveRecord::Migration
       t.integer(:servant_id, null: false)
       t.integer(:user_id, null: false)
     end
-    add_index(:servant_users, [:servant_id, :user_id], null: false)
+    add_index(:servant_users, [:servant_id, :user_id], unique: true)
   end
 end
