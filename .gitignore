@@ -1,5 +1,5 @@
 **/**.swo
 **/**.swp
-main/config/environment.dev.sh
+server/config/environment.dev.sh
 *.swp
 doc/**

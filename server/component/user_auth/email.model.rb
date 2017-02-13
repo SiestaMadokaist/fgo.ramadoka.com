@@ -16,7 +16,7 @@ class Component::UserAuth::Email < Component::UserAuth::Model
   before_validation(:init_validator!, on: :create)
   before_save(:validate_email!)
 
-  class PatternCheckFailure < StandardError; end
+  class PatternCheckFailure < ERR::Forbidden403; end
   EmailRegex = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
   def init_validator!
