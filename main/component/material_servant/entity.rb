@@ -6,7 +6,7 @@ class Component::MaterialServant::Entity
     expose(:count, documentation: {type: Integer})
     expose(:level, documentation: {type: Integer})
   end
-  class WithServantName < Lite
+  class WithServant < Lite
     expose(:servant_name, documentation: {type: String})
   end
 end

@@ -10,6 +10,7 @@ class Component::User::Model < ActiveRecord::Base
       user
     end
   end
+  has_many(:user_auths, class_name: "Component::UserAuth::Model")
   has_many(:servant_users, class_name: "Component::ServantUser::Model")
   has_many(:servants, class_name: "Component::Servant::Model", through: :servant_users)
 

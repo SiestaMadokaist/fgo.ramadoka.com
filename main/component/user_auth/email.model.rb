@@ -24,9 +24,24 @@ class Component::UserAuth::Email < Component::UserAuth::Model
     self.validation_expiry = 1.day.from_now
   end
 
+  def validate!(pass)
+    valid = user.password == Component::UserAuth::Model.hashify(pass)
+    raise ValidationError, "unmatching password" unless valid
+  end
+
   def validate_email!
     raise WrongConstructor unless email?
     raise PatternCheckFailure if EmailRegex.match(origin_id).nil?
     return true
+  end
+
+  def email
+    origin_id
+  end
+
+  def to_basic_auth(password)
+    str = "#{email}:#{password}"
+    base64 = Base64.strict_encode64(str)
+    "Basic #{base64}"
   end
 end

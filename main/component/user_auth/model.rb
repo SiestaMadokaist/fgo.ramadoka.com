@@ -10,6 +10,14 @@ class Component::UserAuth::Model < ActiveRecord::Base
     def hashify(password)
       Digest::SHA1.hexdigest("#{SALT}:#{password}")
     end
+
+    def get_user(authorization)
+      email, pass = AuthParser.new(authorization)
+        .parsed
+      auth = Component::UserAuth::Email.get1(origin_id: email)
+      auth.validate!(pass)
+      auth.user
+    end
   end
   enum(origin: origins)
   belongs_to(:user, class_name: "Component::User::Model")
@@ -17,6 +25,13 @@ class Component::UserAuth::Model < ActiveRecord::Base
   def email?
     origin.to_sym == :email
   end
+
+  def as_email
+    raise ArgumentError, "trying to convert non-email-authorization into Component::UserAuth::Email" unless email?
+    Component::UserAuth::Email.find(id)
+  end
+
 end
 
+UserAuth = Component::UserAuth::Model
 require File.expand_path("../email.model", __FILE__)
