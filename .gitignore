@@ -4,3 +4,4 @@ server/config/environment.dev.sh
 *.swp
 doc/**
 .yardoc/
+./core

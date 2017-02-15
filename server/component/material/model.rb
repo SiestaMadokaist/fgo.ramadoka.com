@@ -41,16 +41,28 @@ class Component::Material::Model < ActiveRecord::Base
 
   before_save(:init_slug!)
 
-  # @callback to call during (before_save)
+  # @desc called during (before_save)
   # @return void
   def init_slug!
     self.slug = self.name.parameterize
   end
 
   # @param user [Component::User::Model]
-  # @return void
+  # @return [Component::MaterialServant::Model]
   def usage_for(user)
-    material_servants.includes(:servant).where(servant_id: user.servants.pluck(:id))
+    material_servants.includes(:servant).where(servant_id: user.servants.select([:id]))
+  end
+
+  # @return [String]
+  def wiki_url
+    _url = "http://fategrandorder.wikia.com/wiki/#{name}"
+    URI.escape(_url)
+  end
+
+  def wiki
+    Component::Material::Wiki.new(self)
   end
 end
 Material = Component::Material::Model
+
+require File.expand_path("../image-downloader/init", __FILE__)

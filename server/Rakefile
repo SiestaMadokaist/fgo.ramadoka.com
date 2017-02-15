@@ -3,7 +3,7 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup :default, :test, :development, :spec
 Bundler.require
-require File.expand_path("../../core/init.rb", __FILE__)
+# require File.expand_path("../../core/init.rb", __FILE__)
 # require 'rspec/core/rake_task'
 
 
@@ -79,6 +79,14 @@ module Rails
   end
 end
 
+namespace :wiki do
+  namespace :material do
+    Material.each do |m|
+      dir = ENV["DIR"] || raise("Specifiy FGO_MATS_DIR rake wiki:material DIR=../")
+      m.wiki.save!(dir)
+    end
+  end
+end
 namespace :g do
   desc "Generate migration. Specify name in the NAME variable"
   task :migration => :environment do

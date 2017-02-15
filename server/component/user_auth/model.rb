@@ -11,6 +11,8 @@ class Component::UserAuth::Model < ActiveRecord::Base
       Digest::SHA1.hexdigest("#{SALT}:#{password}")
     end
 
+    # TODO: handle both authorization from JWT and Basic
+    # or just handle JWT
     def get_user(authorization)
       email, pass = AuthParser.new(authorization)
         .parsed

@@ -1,5 +1,5 @@
 Bundler.require
-require File.expand_path('../../core/init.rb', __FILE__)
+# require File.expand_path('../../core/init.rb', __FILE__)
 require File.expand_path('../application', __FILE__)
 # use ActiveRecord::ConnectionAdapters::ConnectionManagement
 # use ActiveRecord::QueryCache

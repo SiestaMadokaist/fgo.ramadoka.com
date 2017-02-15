@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170212154640) do
+ActiveRecord::Schema.define(version: 20170214132616) do
 
   create_table "material_servants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",  null: false
@@ -24,10 +24,11 @@ ActiveRecord::Schema.define(version: 20170212154640) do
   end
 
   create_table "materials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name",       null: false
-    t.string   "slug",       null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "name",          null: false
+    t.string   "slug",          null: false
+    t.string   "thumbnail_url", null: false
     t.index ["slug"], name: "index_materials_on_slug", unique: true, using: :btree
   end
 
@@ -40,12 +41,13 @@ ActiveRecord::Schema.define(version: 20170212154640) do
   end
 
   create_table "servants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "klass",      null: false
-    t.integer  "star",       null: false
-    t.string   "name",       null: false
-    t.string   "slug",       null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "klass",         null: false
+    t.integer  "star",          null: false
+    t.string   "name",          null: false
+    t.string   "slug",          null: false
+    t.string   "thumbnail_url", null: false
     t.index ["slug"], name: "index_servants_on_slug", unique: true, using: :btree
   end
 
@@ -62,10 +64,11 @@ ActiveRecord::Schema.define(version: 20170212154640) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name",       null: false
-    t.string   "password",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "name",          null: false
+    t.string   "password",      null: false
+    t.string   "thumbnail_url", null: false
   end
 
 end

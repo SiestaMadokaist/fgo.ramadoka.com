@@ -1,8 +1,10 @@
 <html>
   <head>
   <script type="text/javascript">
-    var token = "<%= token %>"
-    window.opener.postMessage(token, "*")
+    var jwt_token = "<%= user.jwt_token %>"
+    window.opener.postMessage({
+      jwt_token: jwt_token
+    }, "*")
   </script>
   </head>
 </html>
