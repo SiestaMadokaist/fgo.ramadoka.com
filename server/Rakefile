@@ -80,10 +80,17 @@ module Rails
 end
 
 namespace :wiki do
-  namespace :material do
-    Material.each do |m|
+  task :material do
+    require File.expand_path("../application", __FILE__)
+    Material.all.each do |m|
       dir = ENV["DIR"] || raise("Specifiy FGO_MATS_DIR rake wiki:material DIR=../")
-      m.wiki.save!(dir)
+      begin
+        m.wiki.save!(dir)
+      rescue => e
+        puts("failed: #{m.name} #{m.wiki_url}")
+      else
+        puts("done: #{m.name} #{m.wiki_url}")
+      end
     end
   end
 end

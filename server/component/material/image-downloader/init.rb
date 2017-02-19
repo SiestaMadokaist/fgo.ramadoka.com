@@ -34,8 +34,12 @@ class Component::Material::Wiki
     image.attributes["data-image-key"].value
   end
 
+  def num
+    "%03i" % [@material.id]
+  end
+
   def save!(dir)
-    File.open("#{dir}/#{@material.id}.#{image_key_name}", "wb"){|f| f.write(image_data)}
+    File.open("#{dir}/#{num}.#{image_key_name}", "wb"){|f| f.write(image_data)}
   end
 
 end
