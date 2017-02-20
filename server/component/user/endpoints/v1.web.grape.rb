@@ -1,9 +1,7 @@
-class Component::User::Endpoints::V1::Web < Grape::API
-  extend Swaggerify
+class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API::V1
 
   Entity = Component::User::Entity
   DEFAULT_HTTP_CODES = []
-
 
   resource("/user") do
     # TODO: http_codes
@@ -21,7 +19,7 @@ class Component::User::Endpoints::V1::Web < Grape::API
 
     desc(
       "create a change_password request",
-      entity: Entity::Lite,
+      entity: Common::Primitive::Entity,
       http_codes: DEFAULT_HTTP_CODES,
     )
     params do
@@ -34,7 +32,7 @@ class Component::User::Endpoints::V1::Web < Grape::API
       user.set_new_password!(new_password: params[:new_password])
       user.send_challenge_change_password!
       Common::Primitive::Entity
-        .show(data: [user.password_changer], presenter: Component::User::Entity::PasswordChanger)
+        .show(data: [user.password_changer], presenter: Entity::PasswordChanger)
     end
 
     desc("enter the validation challenge code sent via email")
@@ -47,6 +45,8 @@ class Component::User::Endpoints::V1::Web < Grape::API
       user = User.get1(id: user_id.to_i)
       validation = params[:validation]
       user.validate_password_change!(validation: validation, uid: uid)
+      Common::Primitive::Entity
+        .show(data: [Hash[success: true]])
     end
 
     desc(
@@ -62,6 +62,5 @@ class Component::User::Endpoints::V1::Web < Grape::API
     end
 
   end
-
 
 end

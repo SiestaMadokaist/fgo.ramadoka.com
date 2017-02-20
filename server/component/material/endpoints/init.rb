@@ -1,7 +1,8 @@
 require File.expand_path("../../../material_servant/init", __FILE__)
-class Component::Material::Endpoints::V1::Web < Grape::API
+class Component::Material::Endpoints::V1::Web < Swaggerify::API::V1
   Entity = Component::Material::Entity
   extend Swaggerify
+
   resource("/material") do
     desc(
       "find similarly named material",

@@ -63,20 +63,9 @@ class ActiveRecord::Base
 end
 module Ramadoka
   class API < Grape::API
-    namespace :v1 do
-      namespace :web do
-        mount Component::User::Endpoints::V1::Web
-        mount Component::Material::Endpoints::V1::Web
-      end
-    end
-    before do
-      header["Access-Control-Allow-Origin"] = headers["Origin"]
-      header["Access-Control-Allow-Headers"] = headers["Access-Control-Request-Headers"]
-      header["Access-Control-Allow-Methods"] = "GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD"
-      header["Access-Control-Expose-Headers"] = "ETag"
-      header["Access-Control-Allow-Credentials"] = "true"
-    end
-    format(:json)
+    mount Component::User::Endpoints::V1::Web::Grape
+    mount Component::User::Endpoints::V2::Web::Grape
+    mount Component::Material::Endpoints::V1::Web
     add_swagger_documentation(
       info: { title: "user-endpoints-v1" },
       hide_format: true,
