@@ -12,7 +12,7 @@ class Component::Material::Model < ActiveRecord::Base
     end
 
     # @param query [Component::Material::Model]
-    # @return [FED]
+    # @return [Common::FED]
     def edit_distance(query)
       mats.map do |m|
         FED.new(m, query.downcase){|m| m.slug.downcase }
@@ -41,7 +41,7 @@ class Component::Material::Model < ActiveRecord::Base
 
   before_save(:init_slug!)
 
-  # @desc called during (before_save)
+  # called during (before_save)
   # @return void
   def init_slug!
     self.slug = self.name.parameterize

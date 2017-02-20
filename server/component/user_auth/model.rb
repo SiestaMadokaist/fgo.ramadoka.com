@@ -1,13 +1,18 @@
 class Component::UserAuth::Model < ActiveRecord::Base
   SALT = "SILENCE-STRIKE-LIKE-A-HURRICANE"
+  class PasswordTooShort < ERR::Forbidden403; end
   class << self
     def name
       "UserAuth"
     end
+
     def origins
       [ :email, :facebook, :google, :github, :account_ki, ]
     end
+
+    # @param password [String]
     def hashify(password)
+      raise PasswordTooShort, "password must be 6 character or longer" unless password.length >= 6
       Digest::SHA1.hexdigest("#{SALT}:#{password}")
     end
 

@@ -36,10 +36,21 @@ class ActiveRecord::Base
   class << self
     include Garner::Mixins::ActiveRecord::Base
 
+    # @param options [Hash]
+    # any parameter inside options
+    # will be used to query
     def get1(options)
       where(options).first
     end
 
+    # @param options [Hash]
+    # any parameter inside options
+    # will be used to query
+    # @param kwargs [Hash]
+    # any parameter inside kwargs
+    # will be used to create the new object
+    # if what queried wasn't found
+    # @return [ActiveRecord::Base]
     def get1!(options, kwargs={})
       g = get1(options)
       if(g.nil?)

@@ -13,13 +13,14 @@ gem "grape-entity"
 gem "nokogiri"
 gem "garner"
 gem "levenshtein"
-gem "yard"
 gem "aws-sdk"
 gem "fuzzy-string-match"
 gem 'grape-swagger'
 gem 'grape-swagger-entity', '~> 0.1.3'
 gem 'grape-swagger-representable', '~> 0.1.3'
 gem "activerecord", require: "active_record"
+gem "redis"
+gem "redis-objects"
 # gem "newrelic_rpm"
 # gem "newrelic-grape"
 gem "oauth2"
@@ -31,4 +32,6 @@ group :development, :spec do
   gem "delorean"
   gem "database_cleaner"
   gem "factory_girl"
+  gem "fakeredis", require: "fakeredis"
+  gem "yard"
 end

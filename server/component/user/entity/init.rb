@@ -1,4 +1,7 @@
 class Component::User::Entity
+  class PasswordChanger < Grape::Entity
+    expose(:identifier, documentation: {type: String})
+  end
 
   class Lite < Grape::Entity
     expose(:id, documentation: {type: Integer})
