@@ -2,7 +2,7 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API::V1
 
   Entity = Component::User::Entity
   DEFAULT_HTTP_CODES = []
-
+  version("v1", using: :header, vendor: "fgo.ramadoka.com")
   resource("/user") do
     # TODO: http_codes
     # [error_code, error_name, error_presenter]

@@ -31,14 +31,11 @@ module Swaggerify
   end
 end
 
-module Swaggerify::API; end
-class Swaggerify::API::V1 < Grape::API
+class Swaggerify::API < Grape::API
   class << self
     def inherited(subclass)
-      vers = api_version
       super
       subclass.instance_eval do
-        version(vers, using: :header, vendor: "fgo.ramadoka.com")
         format(:json)
         before do
           header["Access-Control-Allow-Origin"] = "*"
@@ -55,9 +52,4 @@ class Swaggerify::API::V1 < Grape::API
     end
   end
 end
-
-class Swaggerify::API::V2 < Swaggerify::API::V1
-  def api_version
-    "v2"
-  end
-end
+Swaggerify::API::V1 = Swaggerify::API
