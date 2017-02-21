@@ -36,11 +36,23 @@ class Swaggerify::API < Grape::API
     def inherited(subclass)
       super
       subclass.instance_eval do
-        format(:json)
         before do
           header["Access-Control-Allow-Origin"] = "*"
         end
       end
+    end
+
+    def __vendor
+      "fgo.ramadoka.com"
+    end
+
+    def __format
+      "json"
+    end
+
+    # @param vers [Integer, Range]
+    def produces(*vers)
+      vers.map{|v| "application/vnd.#{__vendor}-v#{v}+#{__format}" }
     end
 
     def api_version
@@ -52,4 +64,3 @@ class Swaggerify::API < Grape::API
     end
   end
 end
-Swaggerify::API::V1 = Swaggerify::API

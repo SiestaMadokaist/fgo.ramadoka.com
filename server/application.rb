@@ -63,13 +63,13 @@ class ActiveRecord::Base
 end
 module Ramadoka
   class API < Grape::API
-    mount Component::User::Endpoints::V1::Web::Grape
     mount Component::User::Endpoints::V2::Web::Grape
+    mount Component::User::Endpoints::V1::Web::Grape
     mount Component::Material::Endpoints::V1::Web
     add_swagger_documentation(
       info: { title: "user-endpoints-v1" },
       hide_format: true,
-      api_version: 1,
+      api_version: "v1",
       mount_path: "api/docs"
     )
     mount Component::User::Endpoints::V1::Web::Sinatra

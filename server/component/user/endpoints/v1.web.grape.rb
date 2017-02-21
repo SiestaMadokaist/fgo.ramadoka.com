@@ -1,12 +1,17 @@
-class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API::V1
+class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
 
   Entity = Component::User::Entity
   DEFAULT_HTTP_CODES = []
-  version("v1", using: :header, vendor: "fgo.ramadoka.com")
+  version("v1", using: :header, vendor: __vendor)
   resource("/user") do
     # TODO: http_codes
     # [error_code, error_name, error_presenter]
-    desc("register via email", entity: Entity::Lite, http_codes: DEFAULT_HTTP_CODES)
+    desc(
+      "register via email",
+      entity: Component::User::Entity::Lite,
+      http_codes: DEFAULT_HTTP_CODES,
+      produces: produces(1)
+    )
     params do
       requires(:email, type: String)
       requires(:password, type: String)
@@ -21,6 +26,7 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API::V1
       "create a change_password request",
       entity: Common::Primitive::Entity,
       http_codes: DEFAULT_HTTP_CODES,
+      produces: produces(1)
     )
     params do
       requires(:email, type: String, desc: "the user`s email")
@@ -35,7 +41,11 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API::V1
         .show(data: [user.password_changer], presenter: Entity::PasswordChanger)
     end
 
-    desc("enter the validation challenge code sent via email")
+    desc(
+      "enter the validation challenge code sent via email",
+      entity: Entity::Lite,
+      produces: produces(1)
+    )
     params do
       requires(:identifier, type: String, desc: "key returned when an API call is made to /change-password/email")
       requires(:validation, type: String, desc: "the challenge validation code sent via email")

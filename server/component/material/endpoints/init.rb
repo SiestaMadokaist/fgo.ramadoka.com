@@ -1,13 +1,11 @@
 require File.expand_path("../../../material_servant/init", __FILE__)
-class Component::Material::Endpoints::V1::Web < Swaggerify::API::V1
-  Entity = Component::Material::Entity
-  extend Swaggerify
+class Component::Material::Endpoints::V1::Web < Swaggerify::API
 
   resource("/material") do
     desc(
       "find similarly named material",
       headers: headers(:optional),
-      entity: Entity::Lite,
+      entity: Component::Material::Entity::Lite,
     )
     params do
       requires(:query, type: String, desc: "must be greater or equal than 4 character")
