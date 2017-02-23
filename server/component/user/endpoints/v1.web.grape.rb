@@ -10,7 +10,7 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
       "register via email",
       entity: Component::User::Entity::Lite,
       http_codes: DEFAULT_HTTP_CODES,
-      produces: produces(1)
+      produces: version(1)
     )
     params do
       requires(:email, type: String)
@@ -26,7 +26,7 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
       "create a change_password request",
       entity: Common::Primitive::Entity,
       http_codes: DEFAULT_HTTP_CODES,
-      produces: produces(1)
+      produces: version(1)
     )
     params do
       requires(:email, type: String, desc: "the user`s email")
@@ -57,6 +57,17 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
       user.validate_password_change!(validation: validation, uid: uid)
       Common::Primitive::Entity
         .show(data: [Hash[success: true]])
+    end
+
+    desc(
+      "parse jwt-token into json object",
+      success: Entity::Lite,
+      produces: version(1),
+      headers: headers(:required)
+    )
+    post("/") do
+      data = AuthParser.new(headers["Authorization"]).parsed
+      Common::Primitive::Entity.show(data: [data], presenter: Entity::Lite)
     end
 
     desc(

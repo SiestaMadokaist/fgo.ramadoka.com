@@ -18,7 +18,7 @@ class Component::MaterialServant::Model < ActiveRecord::Base
   end
 
   def change_from
-    return (servant.star + level) * 10 if ascension?
+    return (servant.star + level - 1) * 10 if ascension?
     return level if skill?
   end
 
@@ -27,7 +27,7 @@ class Component::MaterialServant::Model < ActiveRecord::Base
   end
 
   def change_to
-    return (servant.star + next_level) * 10 if ascension?
+    return (servant.star + next_level - 1) * 10 if ascension?
     return next_level if skill?
   end
 

@@ -63,6 +63,13 @@ class ActiveRecord::Base
 end
 module Ramadoka
   class API < Grape::API
+    before do
+      header["Access-Control-Allow-Origin"] = "*"
+      header["Access-Control-Allow-Headers"] = headers["Access-Control-Request-Headers"]
+      header["Access-Control-Allow-Credentials"] = true
+      header["Access-Control-Allow-Methods"] = "GET, POST, PATCH, PUT, DELETE"
+      header["Access-Control-Expose-Headers"] = "ETag"
+    end
     mount Component::User::Endpoints::V2::Web::Grape
     mount Component::User::Endpoints::V1::Web::Grape
     mount Component::Material::Endpoints::V1::Web
@@ -72,6 +79,7 @@ module Ramadoka
       api_version: "v1",
       mount_path: "api/docs"
     )
+    # options("/(*:url)", anchor: false) { }
     mount Component::User::Endpoints::V1::Web::Sinatra
   end
 end

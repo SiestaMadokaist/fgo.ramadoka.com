@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170214132616) do
     t.datetime "updated_at",    null: false
     t.string   "name",          null: false
     t.string   "slug",          null: false
-    t.string   "thumbnail_url", null: false
+    t.string   "thumbnail_url"
     t.index ["slug"], name: "index_materials_on_slug", unique: true, using: :btree
   end
 
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170214132616) do
     t.integer  "star",          null: false
     t.string   "name",          null: false
     t.string   "slug",          null: false
-    t.string   "thumbnail_url", null: false
+    t.string   "thumbnail_url"
     t.index ["slug"], name: "index_servants_on_slug", unique: true, using: :btree
   end
 
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20170214132616) do
     t.datetime "updated_at",    null: false
     t.string   "name",          null: false
     t.string   "password",      null: false
-    t.string   "thumbnail_url", null: false
+    t.string   "thumbnail_url"
   end
 
 end

@@ -50,9 +50,13 @@ class Swaggerify::API < Grape::API
       "json"
     end
 
+    def version(*vers)
+      vers.map{|v| "application/vnd.#{__vendor}-v#{v}+#{__format}" }
+    end
+
     # @param vers [Integer, Range]
     def produces(*vers)
-      vers.map{|v| "application/vnd.#{__vendor}-v#{v}+#{__format}" }
+      version(*vers)
     end
 
     def api_version

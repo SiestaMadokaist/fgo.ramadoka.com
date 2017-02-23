@@ -21,6 +21,7 @@ class AuthParser
   private def parsed_jwt
     token = @authorization.split(" ").last.strip
     data, meta = JWT.decode(token, HMAC_SECRET, true, algorithm: HASH_METHOD)
+    Hashie::Mash[data]
   end
 
   private def parsed_basic
