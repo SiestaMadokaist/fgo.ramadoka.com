@@ -1,0 +1,207 @@
+GIT
+  remote: git://github.com/sinatra/sinatra.git
+  revision: 32f416c7b8e5131247dadee4ac848ac42c43c761
+  specs:
+    rack-protection (2.0.0.beta2)
+      rack
+    sinatra (2.0.0.beta2)
+      mustermann (= 1.0.0.beta2)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0.beta2)
+      tilt (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    RubyInline (3.12.4)
+      ZenTest (~> 4.3)
+    ZenTest (4.11.1)
+    activemodel (5.0.1)
+      activesupport (= 5.0.1)
+    activerecord (5.0.1)
+      activemodel (= 5.0.1)
+      activesupport (= 5.0.1)
+      arel (~> 7.0)
+    activesupport (5.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (7.1.4)
+    aws-sdk (2.7.7)
+      aws-sdk-resources (= 2.7.7)
+    aws-sdk-core (2.7.7)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.7.7)
+      aws-sdk-core (= 2.7.7)
+    aws-sigv4 (1.0.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    bindata (2.3.5)
+    builder (3.2.3)
+    chronic (0.10.2)
+    coderay (1.1.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    concurrent-ruby (1.0.4)
+    connection_pool (2.2.1)
+    database_cleaner (1.5.3)
+    declarative (0.0.9)
+    declarative-option (0.1.0)
+    delorean (2.1.0)
+      chronic
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    enumerable-lazy (0.0.2)
+    equalizer (0.0.11)
+    erubis (2.7.0)
+    factory_girl (4.8.0)
+      activesupport (>= 3.0.0)
+    fakeredis (0.6.0)
+      redis (~> 3.2)
+    faraday (0.10.1)
+      multipart-post (>= 1.2, < 3)
+    fuzzy-string-match (0.9.7)
+      RubyInline (>= 3.8.6)
+    garner (0.5.3)
+      activesupport
+      json
+      multi_json (>= 1.3.0)
+      rack
+    grape (0.17.0)
+      activesupport
+      builder
+      hashie (>= 2.1.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      mustermann19 (~> 0.4.3)
+      rack (>= 1.3.0)
+      rack-accept
+      virtus (>= 1.0.0)
+    grape-entity (0.6.0)
+      activesupport
+      multi_json (>= 1.3.2)
+    grape-swagger (0.25.3)
+      grape (>= 0.12.0)
+    grape-swagger-entity (0.1.5)
+      grape-entity
+      grape-swagger (>= 0.20.4)
+    grape-swagger-representable (0.1.3)
+      grape-swagger (>= 0.20.2)
+      representable
+    hashie (3.5.3)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    i18n (0.8.0)
+    ice_nine (0.11.2)
+    jmespath (1.3.1)
+    json (2.0.3)
+    json-jwt (1.7.1)
+      activesupport
+      bindata
+      multi_json (>= 1.3)
+      securecompare
+      url_safe_base64
+    jwt (1.5.6)
+    levenshtein (0.2.2)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
+    memoist (0.15.0)
+    method_source (0.8.2)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_portile2 (2.1.0)
+    minitest (5.10.1)
+    multi_json (1.12.1)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    mustermann (1.0.0.beta2)
+    mustermann19 (0.4.4)
+      enumerable-lazy
+    mysql2 (0.4.5)
+    nokogiri (1.7.0.1)
+      mini_portile2 (~> 2.1.0)
+    oauth2 (1.3.0)
+      faraday (>= 0.8, < 0.11)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    puma (3.7.0)
+    rack (2.0.1)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (12.0.0)
+    redis (3.3.3)
+    redis-objects (1.2.1)
+      redis (>= 3.0.2)
+    representable (3.0.3)
+      declarative (< 0.1.0)
+      declarative-option (< 0.2.0)
+      uber (< 0.2.0)
+    securecompare (1.0.0)
+    slop (3.6.0)
+    thread_safe (0.3.5)
+    tilt (2.0.6)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    uber (0.1.0)
+    url_safe_base64 (0.2.2)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+    yard (0.9.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord
+  aws-sdk
+  connection_pool
+  database_cleaner
+  delorean
+  erubis
+  factory_girl
+  fakeredis
+  fuzzy-string-match
+  garner
+  grape
+  grape-entity
+  grape-swagger
+  grape-swagger-entity (~> 0.1.3)
+  grape-swagger-representable (~> 0.1.3)
+  httparty
+  json-jwt
+  levenshtein
+  mail
+  memoist
+  mysql2
+  nokogiri
+  oauth2
+  pry
+  puma
+  rack-test
+  rake
+  redis
+  redis-objects
+  sinatra!
+  yard
+
+RUBY VERSION
+   ruby 2.2.2p95
+
+BUNDLED WITH
+   1.14.3

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: LoginMethod::Facebook
+  
+    &mdash; Documentation by YARD 0.9.8
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "LoginMethod::Facebook";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../LoginMethod.html" title="LoginMethod (module)">LoginMethod</a></span></span>
+     &raquo; 
+    <span class="title">Facebook</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: LoginMethod::Facebook
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Base.html" title="LoginMethod::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Base.html" title="LoginMethod::Base (class)">Base</a></span></li>
+          
+            <li class="next">LoginMethod::Facebook</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>common/login-method/facebook.rb</dd>
+  </dl>
+  
+</div>
+
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="VERSION-constant" class="">VERSION =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>v2.8</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="DialogEndpoint-constant" class="">DialogEndpoint =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.facebook.com/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#VERSION-constant" title="LoginMethod::Facebook::VERSION (constant)">VERSION</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/dialog/oauth</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="Site-constant" class="">Site =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://graph.facebook.com</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="TokenURL-constant" class="">TokenURL =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/oauth/access_token</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="Scope-constant" class="">Scope =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="UserInfoURL-constant" class="">UserInfoURL =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/me</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="Options-constant" class="">Options =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'>Hash</span><span class='lbracket'>[</span>
+  <span class='label'>client_id:</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FGO_FB_CLIENT_ID</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='label'>client_secret:</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FGO_FB_CLIENT_SECRET</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="EmailFacebookRegex-constant" class="">EmailFacebookRegex =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A\d+@facebook.com\z</span><span class='regexp_end'>/</span></span></pre></dd>
+    
+  </dl>
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Base.html" title="LoginMethod::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#ac_token-instance_method" title="LoginMethod::Base#ac_token (method)">#ac_token</a></span>, <span class='object_link'><a href="Base.html#code-instance_method" title="LoginMethod::Base#code (method)">#code</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#client_id-class_method" title="client_id (class method)">.<strong>client_id</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#client_kwargs-class_method" title="client_kwargs (class method)">.<strong>client_kwargs</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#client_secret-class_method" title="client_secret (class method)">.<strong>client_secret</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dialog_url-class_method" title="dialog_url (class method)">.<strong>dialog_url</strong>(queries)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scope-class_method" title="scope (class method)">.<strong>scope</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_info_url-class_method" title="user_info_url (class method)">.<strong>user_info_url</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#avatar_url-instance_method" title="#avatar_url (instance method)">#<strong>avatar_url</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#email-instance_method" title="#email (instance method)">#<strong>email</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#facebook_id-instance_method" title="#facebook_id (instance method)">#<strong>facebook_id</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#facebook_name-instance_method" title="#facebook_name (instance method)">#<strong>facebook_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_data-instance_method" title="#user_data (instance method)">#<strong>user_data</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base.html" title="LoginMethod::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#_access_token-instance_method" title="LoginMethod::Base#_access_token (method)">#_access_token</a></span>, <span class='object_link'><a href="Base.html#_client-instance_method" title="LoginMethod::Base#_client (method)">#_client</a></span>, <span class='object_link'><a href="Base.html#_client-class_method" title="LoginMethod::Base._client (method)">_client</a></span>, <span class='object_link'><a href="Base.html#_user_data-instance_method" title="LoginMethod::Base#_user_data (method)">#_user_data</a></span>, <span class='object_link'><a href="Base.html#client_id=-class_method" title="LoginMethod::Base.client_id= (method)">client_id=</a></span>, <span class='object_link'><a href="Base.html#client_kwargs=-class_method" title="LoginMethod::Base.client_kwargs= (method)">client_kwargs=</a></span>, <span class='object_link'><a href="Base.html#client_secret=-class_method" title="LoginMethod::Base.client_secret= (method)">client_secret=</a></span>, <span class='object_link'><a href="Base.html#dialog_endpoint-class_method" title="LoginMethod::Base.dialog_endpoint (method)">dialog_endpoint</a></span>, <span class='object_link'><a href="Base.html#dialog_endpoint=-class_method" title="LoginMethod::Base.dialog_endpoint= (method)">dialog_endpoint=</a></span>, <span class='object_link'><a href="Base.html#dialog_url-instance_method" title="LoginMethod::Base#dialog_url (method)">#dialog_url</a></span>, <span class='object_link'><a href="Base.html#dialog_url_base_argument-instance_method" title="LoginMethod::Base#dialog_url_base_argument (method)">#dialog_url_base_argument</a></span>, <span class='object_link'><a href="Base.html#from_code-class_method" title="LoginMethod::Base.from_code (method)">from_code</a></span>, <span class='object_link'><a href="Base.html#has_valid_email%3F-instance_method" title="LoginMethod::Base#has_valid_email? (method)">#has_valid_email?</a></span>, <span class='object_link'><a href="Base.html#initialize-instance_method" title="LoginMethod::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Base.html#scope=-class_method" title="LoginMethod::Base.scope= (method)">scope=</a></span>, <span class='object_link'><a href="Base.html#user_info_url=-class_method" title="LoginMethod::Base.user_info_url= (method)">user_info_url=</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="Base.html#initialize-instance_method" title="LoginMethod::Base#initialize (method)">LoginMethod::Base</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="client_id-class_method">
+  
+    .<strong>client_id</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_client_id'>client_id</span>
+  <span class='const'><span class='object_link'><a href="#Options-constant" title="LoginMethod::Facebook::Options (constant)">Options</a></span></span><span class='lbracket'>[</span><span class='symbol'>:client_id</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="client_kwargs-class_method">
+  
+    .<strong>client_kwargs</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_client_kwargs'>client_kwargs</span>
+  <span class='const'>Hash</span><span class='lbracket'>[</span>
+    <span class='label'>site:</span> <span class='const'><span class='object_link'><a href="#Site-constant" title="LoginMethod::Facebook::Site (constant)">Site</a></span></span><span class='comma'>,</span>
+    <span class='label'>token_url:</span> <span class='const'><span class='object_link'><a href="#TokenURL-constant" title="LoginMethod::Facebook::TokenURL (constant)">TokenURL</a></span></span>
+  <span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="client_secret-class_method">
+  
+    .<strong>client_secret</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_client_secret'>client_secret</span>
+  <span class='const'><span class='object_link'><a href="#Options-constant" title="LoginMethod::Facebook::Options (constant)">Options</a></span></span><span class='lbracket'>[</span><span class='symbol'>:client_secret</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dialog_url-class_method">
+  
+    .<strong>dialog_url</strong>(queries)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dialog_url'>dialog_url</span><span class='lparen'>(</span><span class='id identifier rubyid_queries'>queries</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="#Options-constant" title="LoginMethod::Facebook::Options (constant)">Options</a></span></span>
+    <span class='period'>.</span><span class='id identifier rubyid_except'>except</span><span class='lparen'>(</span><span class='symbol'>:client_secret</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_queries'>queries</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#DialogEndpoint-constant" title="LoginMethod::Facebook::DialogEndpoint (constant)">DialogEndpoint</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scope-class_method">
+  
+    .<strong>scope</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scope'>scope</span>
+  <span class='const'><span class='object_link'><a href="#Scope-constant" title="LoginMethod::Facebook::Scope (constant)">Scope</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_info_url-class_method">
+  
+    .<strong>user_info_url</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_info_url'>user_info_url</span>
+  <span class='const'><span class='object_link'><a href="#UserInfoURL-constant" title="LoginMethod::Facebook::UserInfoURL (constant)">UserInfoURL</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="avatar_url-instance_method">
+  
+    #<strong>avatar_url</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_avatar_url'>avatar_url</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='lbracket'>[</span><span class='label'>height:</span> <span class='int'>200</span><span class='comma'>,</span> <span class='label'>width:</span> <span class='int'>200</span><span class='rbracket'>]</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#Site-constant" title="LoginMethod::Facebook::Site (constant)">Site</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#VERSION-constant" title="LoginMethod::Facebook::VERSION (constant)">VERSION</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid__user_data'>_user_data</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>/picture</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="email-instance_method">
+  
+    #<strong>email</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_email'>email</span>
+  <span class='id identifier rubyid_e'>e</span> <span class='op'>=</span> <span class='id identifier rubyid__user_data'>_user_data</span><span class='lbracket'>[</span><span class='symbol'>:email</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid__user_data'>_user_data</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>@facebook.com</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_e'>e</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="facebook_id-instance_method">
+  
+    #<strong>facebook_id</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_facebook_id'>facebook_id</span>
+  <span class='id identifier rubyid__user_data'>_user_data</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="facebook_name-instance_method">
+  
+    #<strong>facebook_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_facebook_name'>facebook_name</span>
+  <span class='id identifier rubyid__user_data'>_user_data</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_data-instance_method">
+  
+    #<strong>user_data</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common/login-method/facebook.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_data'>user_data</span>
+  <span class='comment'># prefer to use ._user_data for local access
+</span>  <span class='comment'># use .user_data for global access
+</span>  <span class='comment'># not doing so might lead to mutual recursion
+</span>  <span class='id identifier rubyid_ud'>ud</span> <span class='op'>=</span> <span class='id identifier rubyid__user_data'>_user_data</span>
+  <span class='const'>Hash</span><span class='lbracket'>[</span>
+    <span class='label'>facebook:</span> <span class='id identifier rubyid_ud'>ud</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>avatar_url:</span> <span class='id identifier rubyid_avatar_url'>avatar_url</span><span class='comma'>,</span>
+    <span class='label'>name:</span> <span class='id identifier rubyid_ud'>ud</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>facebook_id:</span> <span class='id identifier rubyid_ud'>ud</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+  <span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Feb 20 21:44:51 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.8 (ruby-2.2.2).
+</div>
+
+    </div>
+  </body>
+</html>
