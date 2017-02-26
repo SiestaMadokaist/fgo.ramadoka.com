@@ -15,7 +15,7 @@ class Component::User::Entity
   end
 
   class JWT < User
-    expose(:token, documentation: {type: String, desc: "frontend must request with header Authorization: JWT <this-token>"})
+    expose(:jwt_token, documentation: {type: String, desc: "frontend must request with header Authorization: JWT <this-token>"})
   end
 
   Lite = User

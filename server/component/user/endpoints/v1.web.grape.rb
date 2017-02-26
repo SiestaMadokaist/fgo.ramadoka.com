@@ -19,7 +19,27 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
     end
     post("/register") do
       user = Component::UserAuth::Email.register!(params[:email], params[:password], params[:name])
-      Common::Primitive::Entity.show(data: user, presenter: Entity::Lite)
+      Common::Primitive::Entity.show(data: [user], presenter: Entity::Lite)
+    end
+
+    desc(
+      "login with email",
+      entity: Entity::Lite,
+      http_codes: [
+        ERR::PasswordUnmatch,
+        ERR::EmailNotFound,
+        ERR::PasswordTooShort
+      ].map(&:desc),
+      produces: version(1)
+    )
+    params do
+      requires(:email, type: String)
+      requires(:password, type: String)
+    end
+    post("/login") do
+      dparams = declared(params)
+      auth = Component::UserAuth::Email.login!(dparams)
+      Common::Primitive::Entity.show(data: [user], presenter: Entity::Lite)
     end
 
     desc(

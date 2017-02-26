@@ -19,14 +19,14 @@ class Component::Material::Model < ActiveRecord::Base
       end
     end
 
-    class QueryTooShort < ERR::Forbidden403; end
+    class ERR::QueryTooShort < ERR::Forbidden403; end
 
     # @param query [String]
     # @param n [Integer]
     # @raise QueryTooShort
     # @return [Component::Material::Model]
     def lookup(query, n = 5)
-      raise QueryTooShort if query.length < 4
+      raise ERR::QueryTooShort if query.length < 4
       edit_distance(query)
         .sort_by(&:distance)
         .reverse

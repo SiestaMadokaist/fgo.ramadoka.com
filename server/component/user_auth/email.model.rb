@@ -16,11 +16,22 @@ class Component::UserAuth::Email < Component::UserAuth::Model
     end
 
     # @param options [Hash]
-    # options.*kwargs, anything queriable from this model
+    # @option anything queriable from this model
+    # TODO: deprecate maybe
     def retrieve1!(options = {})
       result = get1(options)
       raise ERR::NotFound404 if result.nil?
       result
+    end
+
+    class ERR::EmailNotFound < ERR::NotFound404; end
+    # @param options [Hash]
+    # @option :email :required [String]
+    # @option :password :required [String]
+    def login!(options = {})
+      auth = get1(origin_id: options[:email])
+      raise ERR::EmailNotFound if auth.nil?
+      auth.validate!(password: options[:password])
     end
 
   end
@@ -36,17 +47,19 @@ class Component::UserAuth::Email < Component::UserAuth::Model
   end
 
 
-  class ValidationFailure < ERR::Forbidden403; end
-  def validate!(pass)
-    valid = user.password == Component::UserAuth::Model.hashify(pass)
-    raise ValidationFailure, "unmatching password" unless valid
+  class ERR::PasswordUnmatch < ERR::Forbidden403; end
+  # @param options [Hash]
+  # @option :pass :required [String]
+  def validate!(options = {})
+    valid = user.password == Component::UserAuth::Model.hashify(password: options[:password])
+    raise ERR::PasswordUnmatch, "unmatching password" unless valid
   end
 
-  class WrongConstructor < ERR::ServerError503; end
-  class PatternCheckFailure < ERR::Forbidden403; end
+  class ERR::WrongConstructor < ERR::ServerError503; end
+  class ERR::PatternCheckFailure < ERR::Forbidden403; end
   def validate_email!
-    raise WrongConstructor, to_json unless email?
-    raise PatternCheckFailure, origin_id if EmailRegex.match(origin_id).nil?
+    raise ERR::WrongConstructor, to_json unless email?
+    raise ERR::PatternCheckFailure, origin_id if EmailRegex.match(origin_id).nil?
     return true
   end
 

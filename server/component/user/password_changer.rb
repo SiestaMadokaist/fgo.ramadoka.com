@@ -1,4 +1,3 @@
-require("fakeredis")
 class Component::User::PasswordChanger
   include Redis::Objects
   extend Memoist
@@ -26,11 +25,11 @@ class Component::User::PasswordChanger
     end
   end
 
-  class ValidationFailure < ERR::Forbidden403; end
+  class ERR::ValidationFailure < ERR::Forbidden403; end
   # @param options [Hash]
   # @option :validation [String]
   def validate!(options = {})
-    raise ValidationFailure unless options[:validation] == validation.value
+    raise ERR::ValidationFailure unless options[:validation] == validation.value
     return true
   end
 

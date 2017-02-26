@@ -13,7 +13,7 @@ export default class Login extends Component {
     user: PropTypes.object,
     login: PropTypes.func,
     logout: PropTypes.func,
-    jwtLogin: PropTypes.func
+    oauthLogin: PropTypes.func
   }
 
   handleSubmit = (event) => {
@@ -30,9 +30,7 @@ export default class Login extends Component {
       const { data } = event;
       if (data.success) {
         popup.close();
-        const loginResult = this.props.jwtLogin(data.jwt_token);
-        window.lr = loginResult;
-        return undefined;
+        this.props.oauthLogin(data.user);
       }
     };
   }

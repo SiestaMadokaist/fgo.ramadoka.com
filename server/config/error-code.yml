@@ -1,0 +1,30 @@
+# base erorrs
+- name: ERR::ServerError503
+  code: 503000
+- name: ERR::NoAuthorization401
+  code: 401000
+- name: ERR::Forbidden403
+  code: 403000
+- name: ERR::NotFound404
+  code: 404000
+
+# user defined errors
+# 403s
+- name: ERR::PasswordUnmatch
+  code: 403001
+- name: ERR::QueryTooShort
+  code: 403002
+- name: ERR::ValidationFailure
+  code: 403003
+- name: ERR::PasswordTooShort
+  code: 403004
+- name: ERR::PatternCheckFailure
+  code: 403005
+
+# 404s
+- name: ERR::EmailNotFound
+  code: 404001
+
+# 503s
+- name: ERR::WrongConstructor
+  code: 503001

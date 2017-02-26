@@ -1,0 +1,8 @@
+{
+  "ERR::PasswordUnmatch": {
+    "code": "403002"
+  },
+  "ERR::EmailNotFound": {
+    "code": "404001"
+  }
+}

@@ -8,6 +8,15 @@ const LOGOUT = 'redux-example/auth/LOGOUT';
 const LOGOUT_SUCCESS = 'redux-example/auth/LOGOUT_SUCCESS';
 const LOGOUT_FAIL = 'redux-example/auth/LOGOUT_FAIL';
 
+const FROM_STORAGE = 'redux-example/auth/FROM_STORAGE';
+const FROM_STORAGE_SUCCESS = 'redux-example/auth/FROM_STORAGE_SUCCESS';
+const FROM_STORAGE_FAIL = 'redux-example/auth/FROM_STORAGE_FAIL';
+
+const REHYDRATE = 'persist/REHYDRATE';
+
+const PERSIST_AUTH = 'reduxPersist:auth';
+
+
 const initialState = {
   loaded: false
 };
@@ -75,6 +84,7 @@ export default function reducer(state = initialState, action = {}) {
   }
 }
 
+
 export function isLoaded(globalState) {
   return globalState.auth && globalState.auth.loaded;
 }
@@ -97,20 +107,21 @@ export function login(name) {
   };
 }
 
-export function jwtLogin(jwt) {
+export function oauthLogin(data) {
   return {
     types: [LOGIN, LOGIN_SUCCESS, LOGIN_FAIL],
-    promise: (client) => client.post('/user', {
-      headers: {
-        authorization: `JWT ${jwt}`,
-      }
-    })
+    promise: (client) => {
+      console.log(data);
+      return Promise.resolve(data);
+    }
   };
 }
 
 export function logout() {
   return {
     types: [LOGOUT, LOGOUT_SUCCESS, LOGOUT_FAIL],
-    promise: (client) => client.get('/logout')
+    promise: (client) => {
+      return Promise.resolve(null);
+    }
   };
 }

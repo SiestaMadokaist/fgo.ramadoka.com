@@ -1,3 +1,4 @@
+require File.expand_path("../errors", __FILE__)
 module Swaggerify
   module Header
     Required = Hash[
@@ -36,6 +37,7 @@ class Swaggerify::API < Grape::API
     def inherited(subclass)
       super
       subclass.instance_eval do
+        include Swaggerify::Errors
         before do
           header["Access-Control-Allow-Origin"] = "*"
         end

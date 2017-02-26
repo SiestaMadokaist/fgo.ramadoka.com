@@ -1,1 +1,1 @@
-# require("fakeredis")
+require("fakeredis")

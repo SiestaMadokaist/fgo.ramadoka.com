@@ -8,7 +8,7 @@ class Component::UserAuth::Facebook < Component::UserAuth::Model
       auth = get1(origin_id: fb.facebook_id)
       raise UnregisteredUser, "no auth found facebook: #{fb.facebook_id}" if auth.nil?
       raise UnregisteredUser, "weird, no user found: #{fb.facebook_id}" if auth.nil?
-      auth.user;
+      auth.user
     end
 
     # @param fb [LoginMethod::Facebook]

@@ -12,21 +12,21 @@ import { InfoBar } from 'components';
 import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
+import { getStoredState } from 'redux-persist';
 
-@asyncConnect([{
-  promise: ({store: {dispatch, getState}}) => {
-    const promises = [];
+// @asyncConnect([{
+  // promise: ({store: {dispatch, getState}}) => {
+    // const promises = [];
+    // if (!isInfoLoaded(getState())) {
+      // promises.push(dispatch(loadInfo()));
+    // }
+    // if (!isAuthLoaded(getState())) {
+      // promises.push(dispatch(loadAuth()));
+    // }
 
-    if (!isInfoLoaded(getState())) {
-      promises.push(dispatch(loadInfo()));
-    }
-    if (!isAuthLoaded(getState())) {
-      promises.push(dispatch(loadAuth()));
-    }
-
-    return Promise.all(promises);
-  }
-}])
+    // return Promise.all(promises);
+  // }
+// }])
 @connect(
   state => ({user: state.auth.user}),
   {logout, pushState: push})

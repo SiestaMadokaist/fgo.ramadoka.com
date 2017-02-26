@@ -1,9 +1,9 @@
 <html>
   <head>
   <script type="text/javascript">
-    var jwt_token = "<%= user.jwt_token %>"
+    var user = <%= presenter.represent(user).to_json %>
     window.opener.postMessage({
-      jwt_token: jwt_token,
+      user: user,
       success: true
     }, "*")
   </script>
