@@ -60,7 +60,7 @@ class Mailer::RequestPasswordChallenge < Mailer::Task
   memoize(:raw_template)
 
   def subject
-    "test"
+    "Your Validation Code for Password Change in fgo.ramadoka.com"
   end
 
   def template
@@ -87,8 +87,7 @@ class Mailer::RequestPasswordChallenge < Mailer::Task
   end
 
   def deliver!
-    # mail.deliver!
-    File.open("mail.html", "wb"){|f| f.write(body)}
+    mail.deliver!
   end
 
   memoize(:mail)
