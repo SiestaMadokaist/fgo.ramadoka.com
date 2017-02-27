@@ -1,4 +1,5 @@
 class Component::UserAuth::Email < Component::UserAuth::Model
+  extend Memoist
   class << self
     def default_scope
       where(origin: :email)
@@ -32,6 +33,7 @@ class Component::UserAuth::Email < Component::UserAuth::Model
       auth = get1(origin_id: options[:email])
       raise ERR::EmailNotFound if auth.nil?
       auth.validate!(password: options[:password])
+      return auth
     end
 
   end
@@ -72,4 +74,32 @@ class Component::UserAuth::Email < Component::UserAuth::Model
     base64 = Base64.strict_encode64(str)
     "Basic #{base64}"
   end
+
+  # @param options [Hash]
+  # @option :new_password :required [String]
+  # unhashed user password
+  # store new temporary password in redis
+  # user must then enter validation code
+  # that would be sent via email / phone
+  # @return [Component::User::PasswordChanger]
+  def set_new_password!(options = {})
+    password_changer.password = Component::UserAuth::Model.hashify(password: options[:new_password])
+  end
+
+  # TODO:
+  # send this via email
+  # @param options [Hash]
+  # @option :auth :required [Component::UserAuth::Email]
+  def send_challenge_change_password!(options = {})
+    pc = password_changer
+    mailer = Mailer::RequestPasswordChallenge.new(auth: self)
+    mailer.deliver!
+  end
+
+
+  # @return [Component::User::PasswordChanger]
+  def password_changer
+    Component::User::PasswordChanger.new(user: user)
+  end
+  memoize(:password_changer)
 end

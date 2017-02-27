@@ -39,7 +39,7 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
     post("/login") do
       dparams = declared(params)
       auth = Component::UserAuth::Email.login!(dparams)
-      Common::Primitive::Entity.show(data: [user], presenter: Entity::Lite)
+      Common::Primitive::Entity.show(data: [auth.user], presenter: Entity::Lite)
     end
 
     desc(
@@ -52,13 +52,12 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
       requires(:email, type: String, desc: "the user`s email")
       requires(:new_password, type: String, desc: "the user`s new password")
     end
-    post("/change-password/email") do
+    post("/change-password") do
       auth = Component::UserAuth::Email.retrieve1!(origin_id: params[:email])
-      user = auth.user
-      user.set_new_password!(new_password: params[:new_password])
-      user.send_challenge_change_password!
+      auth.set_new_password!(new_password: params[:new_password])
+      auth.send_challenge_change_password!
       Common::Primitive::Entity
-        .show(data: [user.password_changer], presenter: Entity::PasswordChanger)
+        .show(data: [auth.password_changer], presenter: Entity::PasswordChanger)
     end
 
     desc(
@@ -70,7 +69,7 @@ class Component::User::Endpoints::V1::Web::Grape < Swaggerify::API
       requires(:identifier, type: String, desc: "key returned when an API call is made to /change-password/email")
       requires(:validation, type: String, desc: "the challenge validation code sent via email")
     end
-    post("/validate-change-password/email") do
+    post("/change-password/validate") do
       user_id, uid = params[:identifier].split("-+-")
       user = User.get1(id: user_id.to_i)
       validation = params[:validation]

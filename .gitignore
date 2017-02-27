@@ -1,3 +1,4 @@
 *.swp
 config/environment.dev.sh
 config/.environment.dev.sh
+config/dev.environment.sh

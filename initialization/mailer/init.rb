@@ -69,7 +69,7 @@ class Mailer::RequestPasswordChallenge < Mailer::Task
   memoize(:template)
 
   def body
-    template.result
+    template.result(auth: auth)
   end
   memoize(:body)
 
@@ -85,6 +85,12 @@ class Mailer::RequestPasswordChallenge < Mailer::Task
       end
     end
   end
+
+  def deliver!
+    # mail.deliver!
+    File.open("mail.html", "wb"){|f| f.write(body)}
+  end
+
   memoize(:mail)
 
 end

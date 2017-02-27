@@ -35,34 +35,9 @@ class Component::User::Model < ActiveRecord::Base
     return false
   end
 
-  def jwt_token
-    JWT.encode pre_jwt, HMAC_SECRET, HASH_METHOD
-  end
-
-  def jwt_auth
-    "JWT #{jwt_token}"
-  end
-
   # @param options [Hash]
-  # @option :new_password :required [String]
-  # unhashed user password
-  # store new temporary password in redis
-  # user must then enter validation code
-  # that would be sent via email / phone
-  # @return [Component::User::PasswordChanger]
-  def set_new_password!(options = {})
-    password_changer.password = Component::UserAuth::Model.hashify(options[:new_password])
-  end
-
-  # TODO:
-  # send this via email
-  def send_challenge_change_password!
-    puts(password_changer.validation.value)
-  end
-
-  # @param options [Hash]
-  # @option validation :required [String]
-  # @option uid :required [String]
+  # @option :validation :required [String]
+  # @option :uid :required [String]
   # @return [Void]
   def validate_password_change!(options = {})
     @password_hashed = true
@@ -75,11 +50,13 @@ class Component::User::Model < ActiveRecord::Base
     self.save!
   end
 
-  # @return [Component::User::PasswordChanger]
-  def password_changer
-    Component::User::PasswordChanger.new(user: self)
+  def jwt_token
+    JWT.encode pre_jwt, HMAC_SECRET, HASH_METHOD
   end
-  memoize(:password_changer)
+
+  def jwt_auth
+    "JWT #{jwt_token}"
+  end
 
   def pre_jwt
     Component::User::Entity::PreJWT
