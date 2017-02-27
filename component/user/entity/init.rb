@@ -6,6 +6,9 @@ class Component::User::Entity
   class User < Grape::Entity
     expose(:id, documentation: {type: Integer})
     expose(:name, documentation: {type: String})
+    expose(:updated_at, documentation: {type: Integer}) do |user, _|
+      user.updated_at.to_i
+    end
   end
 
   class PreJWT < User

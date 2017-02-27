@@ -25,7 +25,6 @@ class Component::UserAuth::Email < Component::UserAuth::Model
       result
     end
 
-    class ERR::EmailNotFound < ERR::NotFound404; end
     # @param options [Hash]
     # @option :email :required [String]
     # @option :password :required [String]
@@ -49,7 +48,6 @@ class Component::UserAuth::Email < Component::UserAuth::Model
   end
 
 
-  class ERR::PasswordUnmatch < ERR::Forbidden403; end
   # @param options [Hash]
   # @option :pass :required [String]
   def validate!(options = {})
@@ -57,8 +55,6 @@ class Component::UserAuth::Email < Component::UserAuth::Model
     raise ERR::PasswordUnmatch, "unmatching password" unless valid
   end
 
-  class ERR::WrongConstructor < ERR::ServerError503; end
-  class ERR::PatternCheckFailure < ERR::Forbidden403; end
   def validate_email!
     raise ERR::WrongConstructor, to_json unless email?
     raise ERR::PatternCheckFailure, origin_id if EmailRegex.match(origin_id).nil?
